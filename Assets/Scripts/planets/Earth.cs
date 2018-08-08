@@ -1,17 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿namespace planets
+{
+	public class Earth : Planets {
 
-public class Earth : Planets {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
 	}
-
 }

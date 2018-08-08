@@ -2,6 +2,6 @@
 {
     public interface IPlanet
     {
-        void Evolute();
+        void Evolute(float t);
     }
 }
