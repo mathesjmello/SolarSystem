@@ -5,7 +5,7 @@ using UnityEngine;
 public class OrbitCam : MonoBehaviour {
 
     public GameObject Target;
-    Vector3 direcao;
+    Vector3 _direcao;
     public float CameraVelocity = 5;
 	// Use this for initialization
 	void Start () {
@@ -19,8 +19,8 @@ public class OrbitCam : MonoBehaviour {
 
     void LateUpdate()
     {
-        direcao = Target.transform.position - transform.position;
-        transform.forward = direcao;
-        transform.position += direcao * Time.deltaTime*CameraVelocity*TimeManager.instance.MyTimeScale;
+        _direcao = Target.transform.position - transform.position;
+        transform.forward = _direcao;
+        transform.position += _direcao * Time.deltaTime*CameraVelocity*TimeManager.instance.MyTimeScale;
     }
 }

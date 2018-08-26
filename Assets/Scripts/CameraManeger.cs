@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CameraManeger : MonoBehaviour {
 
-    public static CameraManeger instance;
+    public static CameraManeger Instance;
     public OrbitCam Cam;
     public GameObject[] Planets;
 	// Use this for initialization
 	void Start () {
-        instance = this;
+        Instance = this;
 	}
 	
 	// Update is called once per frame
@@ -20,4 +20,9 @@ public class CameraManeger : MonoBehaviour {
     {
         Cam.CameraVelocity = procimity;
     }
+
+	public void GoTo(int i)
+	{
+		Cam.Target = Planets[i];
+	}
 }
